@@ -1,0 +1,21 @@
+<div>
+      <p>user</p>
+      {/* show the data */}
+      <div className="col-6">
+        <ul>
+          {users?.length
+            ? users.map((user) => {
+                return (
+                  <li key={user._id}>{user.first_name + user.last_name}</li>
+                );
+              })
+            : "nothing to display"}
+        </ul>
+      </div>
+      <button
+        onClick={() => navigate(-1, { replace: true })}
+        className="btn btn-secondary"
+      >
+        GoBack
+      </button>
+    </div>

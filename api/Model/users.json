@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "userName": "biruk",
+        "password": "$2b$10$lk2kNS9w/mJ5p1uQO0o.gOMKEb/9Euyp2UYxFqGjkElQFnZdunY5O",
+        "roles": {
+            "user": "486235",
+            "admin": "980654",
+            "editor": "792610"
+        },
+        "refreshToken": ["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJpZCI6MX0sImlhdCI6MTY1Nzg5MzM4NCwiZXhwIjoxNjU3ODkzNDQ0fQ.OuyvS7EElqnB-Qrae9fvZOLuMZJCwxFQlLeW76cH3Ec"]
+    }
+]
