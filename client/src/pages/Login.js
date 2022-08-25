@@ -54,21 +54,24 @@ const Login = () => {
     if (usernameValidator && passwordValidator) {
       try {
         const response = await axios.post("/login", {
-          username:username,
-          password:password
+          username: username,
+          password: password,
         });
         const roles = response?.data?.roles;
         const accessToken = response?.data?.accessToken;
         const name = response?.data?.username;
-        setAuth({ username:name, accessToken, roles });
-        setMessage(response?.data?.message)
+        setAuth({ username: name, accessToken, roles });
+        setMessage(response?.data?.message);
         console.log(response?.data?.message);
         setUsername("");
         setPassword("");
         navigate("/user");
       } catch (error) {
-        setMessage(error?.response?.data?.message)
-        console.error(error);
+        if (error?.response?.data?.message === undefined) {
+          setMessage("oops! connection error with our server");
+        } else {
+          setMessage(error?.response?.data?.message);
+        }
       }
     } else {
       setMessage("please fill the form correctly");
@@ -148,7 +151,7 @@ const Login = () => {
                           : "#F73430"
                       }
                     >
-                      {message.toUpperCase()}
+                      { message.toUpperCase()}
                     </Text>
                   </Flex>
                 </div>

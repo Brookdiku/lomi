@@ -8,7 +8,6 @@ import {
   Checkbox,
   useColorMode,
   Link,
-  Box,
   // Image,
   // Box,
 } from "@chakra-ui/react";

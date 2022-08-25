@@ -63,7 +63,7 @@ const Nav = () => {
           APP
         </Text>
       </Flex>
-      <Flex
+      {/* <Flex
         pl={"60px"}
         width="100%"
         alignItems={"center"}
@@ -108,7 +108,7 @@ const Nav = () => {
         >
           CONTACT
         </Link>
-      </Flex>
+      </Flex> */}
 
       <Flex alignItems={"center"}>
         {!auth?.username ? (

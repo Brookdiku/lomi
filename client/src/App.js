@@ -9,7 +9,7 @@ import NotFound from "./pages/Notfound";
 import AuthRequired from "./AuthRequired";
 import Layout from "./Layout";
 import UnAuthorized from "./pages/unAuthorized";
-import Home from "./pages/Home";
+import Home from "./pages/Home.js";
 import PersistLogin from "./PersistLogin";
 import Dashboard from "./Dashboard";
 const App = () => {
