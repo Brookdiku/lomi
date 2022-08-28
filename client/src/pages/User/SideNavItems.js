@@ -6,29 +6,31 @@ import {
   Menu,
   MenuButton,
   MenuList,
+  useColorMode,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import NavHoverBox from "./NavHoverBox";
 const SideNavItems = ({ active, sideNav, icon, title }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const {colorMode} = useColorMode();
   return (
     <Flex
-      mt={30}
       flexDir="column"
       w="100%"
       alignItems={sideNav === "large" ? "flex-start" : "center"}
     >
       <Menu placement="right">
         <Link
-          onMouseOver={(e)=>setShowMenu(e.target.value)}
-          onMouseLeave={(e)=>setShowMenu(e.target.value)}
-          backgroundColor={active && "#AEC8CA"}
-          p={3}
+          onMouseOver={(e) => setShowMenu(e.target.value)}
+          onMouseLeave={(e) => setShowMenu(e.target.value)}
+        
+          p={2}
           borderRadius={0}
           _hover={{
+            borderRadius:"5px",
             textDecor: "none",
-            border: "1px solid",
-            borderImage: "linear-gradient(45deg, #57ebde, #aefb2a) 1",
+            color: "#ffa585",
+            backgroundColor:colorMode==="light"? "#E7E7ED" : "#202740"
           }}
           w={sideNav === "large" && "100%"}
         >
@@ -36,8 +38,8 @@ const SideNavItems = ({ active, sideNav, icon, title }) => {
             <Flex>
               <Icon
                 as={icon}
-                fontSize="xl"
-                color={active ? "#82AAAD" : "gray.500"}
+                fontSize="2xl"
+               color={active ? "#ffa585" : "gray.500"}
               />
               <Text ml={5} display={sideNav === "small" ? "none" : "flex"}>
                 {title}
